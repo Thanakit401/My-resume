@@ -1,261 +1,152 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติส่วนตัว | ธนกฤต สุวรรณโชติ (Resume)</title>
+    <title>Thanakrit Suwannachot | Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://jsdelivr.net"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        :root {
-            --primary: #1e293b;
-            --secondary: #0f172a;
-            --accent: #2563eb;
-            --bg: #f8fafc;
-            --text: #334155;
-            --text-light: #64748b;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
         body {
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            padding: 2rem 1rem;
+            font-family: 'Poppins', 'Kanit', sans-serif;
         }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        .blob {
+            animation: transform 20s ease-in-out infinite both alternate, movement_one 40s ease-in-out infinite both;
         }
-
-        /* Header Section */
-        header {
-            text-align: center;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            background-color: #cbd5e1;
-            margin-bottom: 1rem;
-            object-fit: cover;
-        }
-
-        header h1 {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p.subtitle {
-            color: var(--accent);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .contact-info a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent);
-        }
-
-        /* Section Layout */
-        section {
-            margin-bottom: 2.5rem;
-        }
-
-        section h2 {
-            color: var(--secondary);
-            font-size: 1.5rem;
-            border-left: 4px solid var(--accent);
-            padding-left: 0.75rem;
-            margin-bottom: 1.25rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Experience & Education Item */
-        .item {
-            margin-bottom: 1.5rem;
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.25rem;
-        }
-
-        .item-title {
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .item-company {
-            font-weight: 600;
-            color: var(--accent);
-        }
-
-        .item-date {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .item ul {
-            padding-left: 1.25rem;
-            margin-top: 0.5rem;
-            color: var(--text);
-        }
-
-        /* Skills Badges */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .badge {
-            background-color: #eff6ff;
-            color: var(--accent);
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Actions / Buttons */
-        .cta-container {
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.2s;
-        }
-
-        .btn:hover {
-            background-color: #1d4ed8;
-        }
-
-        /* Responsive Layout */
-        @media (max-width: 600px) {
-            .container { padding: 1.5rem; }
-            .item-header { flex-direction: column; }
-            .item-date { margin-top: 0.25rem; }
-            header h1 { font-size: 2rem; }
+        @keyframes transform {
+            0%, 100% { border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%; }
+            20% { border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%; }
+            40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%; }
+            60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%; }
+            80% { border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%; }
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
 
-<div class="container">
-    <header>
-        <!-- สามารถใส่ URL รูปภาพโปรไฟล์ของคุณใน src -->
-        <div style="display:inline-block;"><img src="https://www.blockdit.com/posts/5fb952f4a8a4930ccbdda2cd" alt="Profile" class="profile-img"></div>
-        <h1>ธนกฤต สุวรรณโชติ</h1>
-        <p class="subtitle">Full-Stack Web Developer</p>
-        <div class="contact-info">
-            <span>📍 กรุงเทพฯ, ประเทศไทย</span>
-            <span>📞 089-123-4567</span>
-            <span>✉️ <a href="mailto:somchai@email.com">somchai@email.com</a></span>
-            <span>🔗 <a href="https://linkedin.com" target="_blank">LinkedIn</a></span>
-        </div>
-    </header>
-
-    <section id="about">
-        <h2>เกี่ยวกับฉัน</h2>
-        <p>นักพัฒนาเว็บไซต์ที่มีความกระตือรือร้นและประสบการณ์กว่า 3 ปีในการสร้างสรรค์ Web Application ที่ใช้งานง่าย มีความเชี่ยวชาญด้านการเขียนโค้ดที่สะอาด (Clean Code) และการปรับแต่งประสิทธิภาพของระบบหน้าบ้าน (Frontend Optimization)</p>
-    </section>
-
-    <section id="experience">
-        <h2>ประสบการณ์การทำงาน</h2>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Senior Web Developer — <span class="item-company">Tech Innovation Co.</span></span>
-                <span class="item-date">2024 - ปัจจุบัน</span>
-            </div>
-            <ul>
-                <li>นำทีมพัฒนาโปรเจกต์ E-commerce ด้วย React และ Node.js เพิ่มยอดผู้ใช้งานขึ้น 40%</li>
-                <li>ออกแบบโครงสร้างฐานข้อมูลใหม่ ช่วยลดเวลาโหลดของหน้าเว็บลง 1.5 วินาที</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Junior Developer — <span class="item-company">Digital Solutions Agency</span></span>
-                <span class="item-date">2022 - 2024</span>
-            </div>
-            <ul>
-                <li>พัฒนาและดูแลรักษาเว็บไซต์ของลูกค้ามากกว่า 15 เว็บไซต์ โดยใช้ WordPress และ HTML/CSS</li>
-                <li>ประสานงานกับทีมผู้พิจารณาออกแบบ (UI/UX) เพื่อเปลี่ยนดีไซน์ให้กลายเป็นโค้ดที่ใช้งานได้จริง</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>ทักษะความชำนาญ</h2>
-        <div class="skills-grid">
-            <span class="badge">HTML5 / CSS3</span>
-            <span class="badge">JavaScript (ES6+)</span>
-            <span class="badge">React.js</span>
-            <span class="badge">Node.js</span>
-            <span class="badge">SQL / MongoDB</span>
-            <span class="badge">Git & GitHub</span>
-            <span class="badge">Responsive Design</span>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>ประวัติการศึกษา</h2>
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">วิทยาศาสตรบัณฑิต (วิทยาการคอมพิวเตอร์)</span>
-                <span class="item-date">2018 - 2022</span>
-            </div>
-            <p style="color: var(--text-light);">มหาวิทยาลัยนวัตกรรมเทคโนโลยี</p>
-        </div>
-    </section>
-
-    <div class="cta-container">
-        <!-- ใส่ลิงก์สำหรับดาวน์โหลดไฟล์ PDF เรซูเม่ฉบับเต็มของคุณที่นี่ -->
-        <a href="#" class="btn">⬇️ ดาวน์โหลดเรซูเม่ฉบับ PDF</a>
+    <!-- ลูกเล่นพื้นหลังแบบ Dynamic Gradient Blobs -->
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden opacity-30 dark:opacity-20 pointer-events-none">
+        <div class="blob absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-400 mix-blend-multiply filter blur-3xl opacity-70"></div>
+        <div class="blob absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-purple-400 mix-blend-multiply filter blur-3xl opacity-70" style="animation-delay: -5s;"></div>
     </div>
-</div>
 
-</body>
-</html>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">THANAKRIT.S</a>
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex gap-6 font-medium">
+                    <a href="#about" class="hover:text-indigo-600 transition">เกี่ยวกับฉัน</a>
+                    <a href="#skills" class="hover:text-indigo-600 transition">ทักษะ</a>
+                    <a href="#projects" class="hover:text-indigo-600 transition">ผลงาน</a>
+                    <a href="#contact" class="hover:text-indigo-600 transition">ติดต่อ</a>
+                </div>
+                <!-- ปุ่มสลับโหมด มืด/สว่าง -->
+                <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:scale-110 transition">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (เเนะนำตัวพร้อมลูกเล่นพิมพ์อักษรวิ่ง) -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-4xl text-center">
+            <div class="mb-6 inline-block uppercase tracking-widest text-sm font-semibold text-indigo-600 bg-indigo-50 dark:bg-indigo-950/50 px-4 py-1.5 rounded-full">
+                ยินดีต้อนรับสู่พอร์ตโฟลิโอของฉัน
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                สวัสดีครับ ผมชื่อ <br>
+                <span class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">ธนกฤต สุวรรณโชติ</span>
+            </h1>
+            <!-- Typing Effect ลูกเล่นตัวหนังสือวิ่ง -->
+            <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 min-h-[40px]">
+                ผมเป็น <span id="typing-text" class="border-r-2 border-indigo-500 font-semibold text-indigo-500"></span>
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#projects" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-xl shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition transform hover:-translate-y-1">ดูผลงานของผม</a>
+                <a href="#contact" class="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700/50 transition transform hover:-translate-y-1">ติดต่อฉัน</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">เกี่ยวกับฉัน</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- กรอบรูปที่มีลูกเล่นขยับได้ -->
+            <div class="relative group mx-auto">
+                <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative w-72 h-72 rounded-2xl bg-slate-200 dark:bg-slate-800 flex items-center justify-center overflow-hidden border border-slate-200 dark:border-slate-700">
+                    <!-- ใส่รูปภาพของคุณที่นี่ -->
+                    <i class="fa-solid fa-user-astronaut text-7xl text-indigo-500 animate-bounce"></i>
+                </div>
+            </div>
+            <div>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                    ผมมุ่งมั่นที่จะพัฒนาทักษะด้านเทคโนโลยีและการออกแบบเพื่อสร้างสรรค์เว็บแอปพลิเคชันที่ใช้งานง่าย มีประสิทธิภาพ และตอบโจทย์ผู้ใช้งานได้อย่างดีที่สุด ชอบเรียนรู้สิ่งใหม่ๆ และพร้อมรับความท้าทายอยู่เสมอ
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                        <span class="text-xs text-slate-400">อีเมล</span>
+                        <p class="font-medium text-sm break-all">thanakrit.s@example.com</p>
+                    </div>
+                    <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700/50">
+                        <span class="text-xs text-slate-400">สัญชาติ</span>
+                        <p class="font-medium">ไทย (Thai)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (ทักษะพร้อมเกจความสามารถแอนิเมชัน) -->
+    <section id="skills" class="py-24 bg-slate-100 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">ทักษะความสามารถ</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+                    <div class="flex justify-between mb-2 font-medium">
+                        <span>Frontend Development (HTML/CSS/JS)</span>
+                        <span class="text-indigo-500">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+                    <div class="flex justify-between mb-2 font-medium">
+                        <span>UI/UX Design (Figma)</span>
+                        <span class="text-indigo-500">80%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full rounded-full transition-all duration-1000" style="width: 80%"></div>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+                    <div class="flex justify-between mb-2 font-medium">
+                        <span>Backend & Databases</span>
+                        <span class="text-indigo-500">75%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full rounded-full transition-all duration-1000" style="width: 75%"></div>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+                    <div class="flex justify-between mb-2 font-medium">
+                        <span>Problem Solving</span>
+                        <span class="text-indigo-500">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
